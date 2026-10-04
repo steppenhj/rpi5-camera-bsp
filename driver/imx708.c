@@ -2045,7 +2045,7 @@ static int imx708_probe(struct i2c_client *client)
 	/* Initialize default format */
 	imx708_set_default_format(imx708);
 
-	/* Enable runtime PM and turn off the device */
+	/* Enable runtime PM with autosuspend (5s) */
 	pm_runtime_set_active(dev);
 	pm_runtime_get_noresume(dev);
 	pm_runtime_enable(dev);
@@ -2092,7 +2092,7 @@ error_handler_free:
 
 error_pm_runtime:
 	pm_runtime_disable(dev);
-	pm_runtime_set_suspended(dev);
+	pm_runtime_put_noidle(dev);
 
 error_power_off:
 	imx708_power_off(&client->dev);

@@ -1,0 +1,82 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2835";  /* 원본과 같은 값 */
+
+    /* 1. 센서 클럭 켜기 */
+    fragment@0 {
+        target = <&cam1_clk>;
+        __overlay__ {
+            status = "okay";
+            clock-frequency = <24000000>;
+        };
+    };
+
+    /* 2. 전원 스위치 - 켤 때 기다리는 시간 */
+    fragment@1 {
+        target = <&cam1_reg>;
+        __overlay__ {
+            startup-delay-us = <70000>;
+            off-on-delay-us = <30000>;
+            regulator-min-microvolt = <2700000>;
+            regulator-max-microvolt = <2700000>;
+        };
+    };
+
+    /* 3. CAM1의 I2C 버스에 센서와 렌즈 모터 */
+    fragment@2 {
+        target = <&i2c_csi_dsi1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            imx708@1a {
+                compatible = "sony,imx708";
+                reg = <0x1a>;
+                clocks = <&cam1_clk>;
+                clock-names = "inclk";
+                vana1-supply = <&cam1_reg>;
+                vana2-supply = <&cam_dummy_reg>;
+                vdig-supply = <&cam_dummy_reg>;
+                vddl-supply = <&cam_dummy_reg>;
+                rotation = <180>;
+                orientation = <2>;
+                lens-focus = <&my_vcm>;
+
+                port {
+                    my_cam_ep: endpoint {
+                        clock-lanes = <0>;
+                        data-lanes = <1 2>;
+                        clock-noncontinuous;
+                        link-frequencies = /bits/ 64 <450000000>;
+                        remote-endpoint = <&my_csi_ep>;
+                    };
+                };
+            };
+
+            my_vcm: dw9817@c {
+                compatible = "dongwoon,dw9817-vcm";
+                reg = <0x0c>;
+                VDD-supply = <&cam1_reg>;
+            };
+        };
+    };
+
+    /* 4. CAM1의 CSI-2 수신기를 켜고 센서와 서로 가리키게 */
+    fragment@3 {
+        target = <&csi1>;
+        __overlay__ {
+            status = "okay";
+            port {
+                my_csi_ep: endpoint {
+                    remote-endpoint = <&my_cam_ep>;
+                    clock-lanes = <0>;
+                    data-lanes = <1 2>;
+                    clock-noncontinuous;
+                };
+            };
+        };
+    };
+};

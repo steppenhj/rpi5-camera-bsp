@@ -1,0 +1,12 @@
+# 개인 사진 · 기기 로그는 올리지 않는다
+shots/
+oops-*.txt
+# 빌드 결과물 — 소스만 올린다
+*.dtbo
+*.o
+*.ko
+*.mod
+*.mod.c
+.*.cmd
+Module.symvers
+modules.order

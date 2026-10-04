@@ -1,0 +1,80 @@
+[   97.005535] imx708 11-001a: [bsp] stream on: power 9027 us, start 109272 us, common regs rewritten
+[   98.898632] imx708 11-001a: [bsp] power off
+[   99.016353] imx708 11-001a: [bsp] stream on: power 8745 us, start 66606 us, common regs rewritten
+[   99.156542] imx708 11-001a: [bsp] power off
+[   99.442601] imx708 11-001a: [bsp] stream on: power 9061 us, start 65910 us, common regs rewritten
+[  101.369211] imx708 11-001a: [bsp] power off
+[  101.480971] imx708 11-001a: [bsp] stream on: power 9027 us, start 65508 us, common regs rewritten
+[  101.616706] imx708 11-001a: [bsp] power off
+[  101.810226] imx708 11-001a: [bsp] stream on: power 9026 us, start 65182 us, common regs rewritten
+[  103.738982] imx708 11-001a: [bsp] power off
+[  103.850829] imx708 11-001a: [bsp] stream on: power 9024 us, start 65611 us, common regs rewritten
+[  103.987564] imx708 11-001a: [bsp] power off
+[  104.181488] imx708 11-001a: [bsp] stream on: power 9028 us, start 65191 us, common regs rewritten
+[  106.110808] imx708 11-001a: [bsp] power off
+[  106.326351] imx708 11-001a: [bsp] stream on: power 12883 us, start 66009 us, common regs rewritten
+[  106.469667] imx708 11-001a: [bsp] power off
+[  106.694401] imx708 11-001a: [bsp] stream on: power 9024 us, start 65217 us, common regs rewritten
+[  108.654961] imx708 11-001a: [bsp] power off
+[  108.767068] imx708 11-001a: [bsp] stream on: power 9025 us, start 65610 us, common regs rewritten
+[  108.903481] imx708 11-001a: [bsp] power off
+[  109.098508] imx708 11-001a: [bsp] stream on: power 9025 us, start 66873 us, common regs rewritten
+[  111.025971] imx708 11-001a: [bsp] power off
+[  111.139097] imx708 11-001a: [bsp] stream on: power 9028 us, start 65648 us, common regs rewritten
+[  111.275830] imx708 11-001a: [bsp] power off
+[  111.469573] imx708 11-001a: [bsp] stream on: power 9025 us, start 65206 us, common regs rewritten
+[  113.398756] imx708 11-001a: [bsp] power off
+[  113.519567] imx708 11-001a: [bsp] stream on: power 8849 us, start 65919 us, common regs rewritten
+[  113.662969] imx708 11-001a: [bsp] power off
+[  113.890441] imx708 11-001a: [bsp] stream on: power 9023 us, start 65195 us, common regs rewritten
+[  115.817674] imx708 11-001a: [bsp] power off
+[  115.930432] imx708 11-001a: [bsp] stream on: power 9029 us, start 65652 us, common regs rewritten
+[  116.066347] imx708 11-001a: [bsp] power off
+[  116.260358] imx708 11-001a: [bsp] stream on: power 9025 us, start 65191 us, common regs rewritten
+[  118.219836] imx708 11-001a: [bsp] power off
+[  118.331213] imx708 11-001a: [bsp] stream on: power 8180 us, start 65617 us, common regs rewritten
+[  118.467857] imx708 11-001a: [bsp] power off
+[  118.661436] imx708 11-001a: [bsp] stream on: power 9025 us, start 65236 us, common regs rewritten
+[  120.591378] imx708 11-001a: [bsp] power off
+[  120.711527] imx708 11-001a: [bsp] stream on: power 8584 us, start 65930 us, common regs rewritten
+[  120.855831] imx708 11-001a: [bsp] power off
+[  150.586258] imx708 11-001a: [bsp] stream on: power 9032 us, start 65427 us, common regs rewritten
+[  152.515387] imx708 11-001a: [bsp] power off
+[  152.636337] imx708 11-001a: [bsp] stream on: power 9033 us, start 65940 us, common regs rewritten
+[  152.779641] imx708 11-001a: [bsp] power off
+[  153.010697] imx708 11-001a: [bsp] stream on: power 9025 us, start 65171 us, common regs rewritten
+[  154.938405] imx708 11-001a: [bsp] power off
+[  155.050330] imx708 11-001a: [bsp] stream on: power 9030 us, start 65609 us, common regs rewritten
+[  155.186088] imx708 11-001a: [bsp] power off
+[  155.379864] imx708 11-001a: [bsp] stream on: power 8370 us, start 65202 us, common regs rewritten
+[  157.339404] imx708 11-001a: [bsp] power off
+[  157.451652] imx708 11-001a: [bsp] stream on: power 9030 us, start 65596 us, common regs rewritten
+[  157.589077] imx708 11-001a: [bsp] power off
+[  157.782843] imx708 11-001a: [bsp] stream on: power 9024 us, start 65188 us, common regs rewritten
+[  159.711198] imx708 11-001a: [bsp] power off
+[  159.832776] imx708 11-001a: [bsp] stream on: power 8820 us, start 65993 us, common regs rewritten
+[  159.976084] imx708 11-001a: [bsp] power off
+[  160.207873] imx708 11-001a: [bsp] stream on: power 9031 us, start 65387 us, common regs rewritten
+[  162.136921] imx708 11-001a: [bsp] power off
+[  162.260644] imx708 11-001a: [bsp] stream on: power 11996 us, start 65796 us, common regs rewritten
+[  162.404874] imx708 11-001a: [bsp] power off
+[  162.628036] imx708 11-001a: [bsp] stream on: power 8673 us, start 65184 us, common regs rewritten
+[  164.588413] imx708 11-001a: [bsp] power off
+[  164.700639] imx708 11-001a: [bsp] stream on: power 8832 us, start 65725 us, common regs rewritten
+[  164.836491] imx708 11-001a: [bsp] power off
+[  165.031088] imx708 11-001a: [bsp] stream on: power 9035 us, start 65207 us, common regs rewritten
+[  166.958944] imx708 11-001a: [bsp] power off
+[  167.071081] imx708 11-001a: [bsp] stream on: power 9027 us, start 65594 us, common regs rewritten
+[  167.207827] imx708 11-001a: [bsp] power off
+[  167.402266] imx708 11-001a: [bsp] stream on: power 9025 us, start 65190 us, common regs rewritten
+[  169.331570] imx708 11-001a: [bsp] power off
+[  169.452911] imx708 11-001a: [bsp] stream on: power 9036 us, start 65923 us, common regs rewritten
+[  169.596236] imx708 11-001a: [bsp] power off
+[  169.826538] imx708 11-001a: [bsp] stream on: power 9027 us, start 65376 us, common regs rewritten
+[  171.754769] imx708 11-001a: [bsp] power off
+[  171.874931] imx708 11-001a: [bsp] stream on: power 9029 us, start 65903 us, common regs rewritten
+[  172.019142] imx708 11-001a: [bsp] power off
+[  172.271675] imx708 11-001a: [bsp] stream on: power 9024 us, start 65369 us, common regs rewritten
+[  174.198878] imx708 11-001a: [bsp] power off
+[  174.311456] imx708 11-001a: [bsp] stream on: power 9024 us, start 65586 us, common regs rewritten
+[  174.447120] imx708 11-001a: [bsp] power off

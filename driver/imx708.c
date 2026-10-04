@@ -1592,11 +1592,15 @@ static int imx708_set_stream(struct v4l2_subdev *sd, int enable)
 	}
 
 	if (enable) {
+		ktime_t t0 = ktime_get(), t1;
+		bool cold = !imx708->common_regs_written;
+
 		ret = pm_runtime_get_sync(&client->dev);
 		if (ret < 0) {
 			pm_runtime_put_noidle(&client->dev);
 			goto err_unlock;
 		}
+		t1 = ktime_get();
 
 		/*
 		 * Apply default & customized values
@@ -1605,6 +1609,11 @@ static int imx708_set_stream(struct v4l2_subdev *sd, int enable)
 		ret = imx708_start_streaming(imx708);
 		if (ret)
 			goto err_rpm_put;
+
+		dev_info(&client->dev, "[bsp] stream on: power %lld us, start %lld us, common regs %s\n",
+				ktime_us_delta(t1, t0), ktime_us_delta(ktime_get(), t1),
+				cold ? "rewritten" : "kept");
+
 	} else {
 		imx708_stop_streaming(imx708);
 		pm_runtime_put(&client->dev);
@@ -1669,6 +1678,8 @@ static int imx708_power_off(struct device *dev)
 	struct i2c_client *client = to_i2c_client(dev);
 	struct v4l2_subdev *sd = i2c_get_clientdata(client);
 	struct imx708 *imx708 = to_imx708(sd);
+
+	dev_info(dev, "[bsp] power off\n");
 
 	gpiod_set_value_cansleep(imx708->reset_gpio, 0);
 	regulator_bulk_disable(ARRAY_SIZE(imx708_supply_name),

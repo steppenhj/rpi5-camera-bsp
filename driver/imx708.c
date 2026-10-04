@@ -2029,6 +2029,8 @@ static int imx708_probe(struct i2c_client *client)
 	if (ret)
 		goto error_power_off;
 
+	dev_info(dev, "rpi-5-camera-bsp: my own build (686f5708)\n");
+
 	/* Initialize default format */
 	imx708_set_default_format(imx708);
 

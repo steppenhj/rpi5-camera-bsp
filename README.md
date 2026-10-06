@@ -9,9 +9,9 @@ Bringing up the IMX708 (Camera Module 3) on a Raspberry Pi 5 from the kernel lev
 
 | 단계 | 모드 전환 1회 평균 | 측정 |
 |---|---|---|
-| 기준 — 실행 중인 커널과 같은 판의 드라이버 | 75.1 ms | 20회 |
+| 기준 — 실행 중인 커널과 같은 판의 드라이버 | 74.7 ms | 50회 |
 | + 전원 관리 수정 백포트 (5초 autosuspend) | 45.7 ms | 10회 |
-| + 카메라 I2C 버스 100 kHz → 400 kHz (Device Tree) | 14.3 ms | 25회 |
+| + 카메라 I2C 버스 100 kHz → 400 kHz (Device Tree) | 14.2 ms | 50회 |
 
 - 기준 드라이버는 영상을 멈출 때마다 센서를 리셋해서, 다시 켤 때 레지스터를 처음부터 다시 썼습니다.
 - 백포트한 수정은 Raspberry Pi 커널의 커밋 [6b7a0deb](https://github.com/raspberrypi/linux/commit/6b7a0deb1c500741973928195ef63ac128edb232)입니다. 손으로 옮긴 뒤 원본과 `diff` 로 대조했습니다.
